@@ -1,4 +1,4 @@
-class Account {
+/* class Account {
     // readonly id: number;
     // owner: string;
     // private _balance: number;
@@ -24,11 +24,11 @@ class Account {
     get balance(): number {
         return this._balance
     }
-    /*  set balance(value: number) {
-         if (value < 0)
-             throw new Error('Invalid value')
-         this._balance = value
-     } */
+    //  set balance(value: number) {
+    //      if (value < 0)
+    //          throw new Error('Invalid value')
+    //      this._balance = value
+    //  }
 }
 let account = new Account(1, 'Mosh', 0)
 console.log(account.balance);
@@ -42,4 +42,12 @@ console.log(account.balance);
 // console.log(account instanceof Account);
 
 // Readonly
-// account.id = 0
+// account.id = 0 */
+
+class SeatAssignment {
+    //Index Signature Property
+    [seatNumber: string]: string;
+}
+let seats = new SeatAssignment();
+seats.A1 = 'Mosh'
+seats.A2 = 'John'
