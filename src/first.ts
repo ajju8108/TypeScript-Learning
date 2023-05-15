@@ -98,7 +98,7 @@ kgToLbs('10kg') */
 
 //Intersection Type
 // let weight: number & string;
-type Draggable = {
+/* type Draggable = {
     drag: () => void
 }
 type Resizeable = {
@@ -109,4 +109,43 @@ type UIWidget = Draggable & Resizeable
 let textBox: UIWidget = {
     drag: () => { },
     resize: () => { }
+} */
+
+//Literal Types
+// literal meaning (exact or specific) value
+/* type Quantity = 50 | 100;
+let quantity: Quantity = 100;
+
+type metric = 'cm' | 'inch' */
+
+//Nullable types
+/* function greet(name: string | null) {
+    if (name)
+        console.log(name.toUpperCase());
+    else
+        console.log('Hola');
+
+
 }
+greet(null) */
+
+//Optional Chaining
+/* type Customer = {
+    birthday?: Date
+}
+function getCustomer(id: number): Customer | null | undefined {
+    return id === 0 ? null : { birthday: new Date() }
+}
+let customer = getCustomer(1);
+//optional property access operator
+console.log(customer?.birthday?.getFullYear());
+
+//optional element access operator
+// customer?.[0]
+
+//OPtional call
+let log: any = null;
+log?.('a') */
+
+
+// The Nullish Coaelscing Operator
