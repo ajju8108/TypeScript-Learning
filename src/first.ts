@@ -149,3 +149,34 @@ log?.('a') */
 
 
 // The Nullish Coaelscing Operator
+/* let speed: number | null = null;
+let ride = {
+    //nullish value
+    speed: speed ?? 30
+} */
+
+//Type Assertions
+/* let phone = <HTMLInputElement>document.getElementById('phone');
+phone.value */
+
+//The Unkown Type
+/* function render(document: unknown) {
+    //Narrowing
+    if (document instanceof ) {
+        document.toUpperCase();
+    }
+
+} */
+
+
+
+//The Never Type
+function processEvents(): never {
+    while (true) {
+
+    }
+}
+
+processEvents()
+console.log('Hello World');
+

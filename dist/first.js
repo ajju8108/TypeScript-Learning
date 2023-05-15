@@ -1,11 +1,8 @@
 "use strict";
-function kgToLbs(weight) {
-    if (typeof weight === 'number') {
-        return weight * 2.2;
+function processEvents() {
+    while (true) {
     }
-    else
-        return parseInt(weight) * 2.2;
 }
-kgToLbs(10);
-kgToLbs('10kg');
+processEvents();
+console.log('Hello World');
 //# sourceMappingURL=first.js.map
