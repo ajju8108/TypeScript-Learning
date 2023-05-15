@@ -1,4 +1,5 @@
-/* "use strict";
+/* "use strict"; */
+/* 
 let age = 20;
 if (age < 50)
     age += 10;
@@ -31,6 +32,9 @@ function render(document: any) {
 // let numbers = [1, 2]
 /* let numbers = [] // any type
 let numbers2 : number[] = []
-numbers2.forEach(n => { */
+numbers2.forEach(n => {
     
-});
+}); */
+
+//Tuples
+let user:[number, string] = [1, 'Mosh']

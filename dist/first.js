@@ -1,3 +1,3 @@
 "use strict";
-let numbers = [1, 2];
+let user = [1, 'Mosh'];
 //# sourceMappingURL=first.js.map
