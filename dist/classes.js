@@ -1,17 +1,21 @@
 "use strict";
-class Account {
-    constructor(id, owner, balance) {
-        this.id = id;
-        this.balance = balance;
-        this.owner = owner;
+class Person {
+    constructor(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
-    deposit(amount) {
-        if (amount <= 0)
-            throw new Error('Invalid amount');
-        this.balance += amount;
+    get fullName() {
+        return this.firstName + ' ' + this.lastName;
+    }
+    walk() {
+        console.log('walking');
     }
 }
-let account = new Account(1, 'Mosh', 0);
-account.deposit(100);
-console.log(account instanceof Account);
+class Teacher extends Person {
+    get fullName() {
+        return 'Professor' + super.fullName;
+    }
+}
+let teacher = new Teacher('john', 'smith');
+console.log(teacher.fullName);
 //# sourceMappingURL=classes.js.map

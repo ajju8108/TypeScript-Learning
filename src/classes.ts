@@ -79,7 +79,60 @@ console.log(Ride.activeRides); */
 
 
 //Inheritance
-class Person {
+/* class Person {
+    constructor(public firstName: string, public lastName: string) {
+
+    }
+    get fullName() {
+        return this.firstName + ' ' + this.lastName
+    }
+    walk() {
+        console.log('walking');
+
+    }
+} */
+
+
+// Method Overriding
+/* class Person {
+    constructor(public firstName: string, public lastName: string) {
+
+    }
+    get fullName() {
+        return this.firstName + ' ' + this.lastName
+    }
+    walk() {
+        console.log('walking');
+
+    }
+} */
+
+/* class Student extends Person {
+    constructor(public studentId: number, firstName: string, lastName: string) {
+        super(firstName, lastName);
+    }
+    get fullName() {
+        return this.firstName + ' ' + this.lastName
+    }
+    takeTest() {
+        console.log('taking test');
+
+    }
+} */
+/* class Teacher extends Person {
+    get fullName() {
+        return 'Professor' + super.fullName
+    }
+}
+let teacher = new Teacher('john', 'smith')
+console.log(teacher.fullName);
+ */
+
+
+
+
+//Polymorphism
+/* class Person {
     constructor(public firstName: string, public lastName: string) {
 
     }
@@ -91,14 +144,58 @@ class Person {
 
     }
 }
-
-class Student extends Person {
-    constructor(public studentId: number, firstName: string, lastName: string) {
-        super(firstName, lastName);
+class Teacher extends Person {
+    override get fullName() {
+        return 'Professor' + super.fullName
     }
-    takeTestI() {
-        console.log('Taking a test');
+} */
+
+
+// Abstract classes and method
+/* abstract class Shape {
+    constructor(public color: string) {
+
+    }
+    render() { }
+}
+class Circle extends Shape {
+    constructor(public radius: number, color: string) {
+        super(color);
+    }
+    override render(): void {
+        console.log('Rendering a circle');
 
     }
 }
-let student = new Student(1, 'John', 'gmail')
+let shape = new Shape('red')
+shape.render() */
+
+
+// Interface
+/* abstract class Calendar {
+    constructor(public name: string) { }
+    abstract addEvent(): void;
+    abstract removeEvent(): void;
+}
+ */
+interface Calendar {
+    name: string;
+    addEvent(): void;
+    removeEvent(): void;
+}
+
+interface CloudCalendar extends Calendar {
+    sync(): void;
+
+}
+
+class GoogleCalender implements Calendar {
+    constructor(public name: string) { }
+    addEvent(): void {
+        throw new Error("Method not implemented.");
+    }
+    removeEvent(): void {
+        throw new Error("Method not implemented.");
+    }
+
+}

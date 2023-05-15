@@ -170,13 +170,14 @@ phone.value */
 
 
 
+
 //The Never Type
-function processEvents(): never {
+/* function processEvents(): never {
     while (true) {
 
     }
 }
 
 processEvents()
-console.log('Hello World');
+console.log('Hello World'); */
 
